@@ -7,6 +7,9 @@
     <persistence-unit name="petstore" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
+        <!--CLASS-->
+        <class>petstore.entite.Address</class>
+
         <properties>
             <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
 
