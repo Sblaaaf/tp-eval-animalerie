@@ -9,6 +9,9 @@
 
         <!--CLASS-->
         <class>petstore.entite.Address</class>
+        <class>petstore.entite.Animal</class>
+        <class>petstore.entite.Fish</class>
+        <class>petstore.entite.Cat</class>
 
         <properties>
             <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
