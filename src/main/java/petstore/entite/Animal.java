@@ -13,8 +13,8 @@ public class Animal {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // L'UML demande "Date". @Temporal précise à la base qu'on ne veut stocker que la date (sans l'heure)
-    @Temporal(TemporalType.DATE)
+    // Date - @Temporal
+    @Temporal(TemporalType.DATE) // stocke la date
     private Date birth;
 
     private String couleur;
@@ -28,7 +28,12 @@ public class Animal {
         this.couleur = couleur;
     }
 
-    // Getters Setters
+    // Relation N-1 vers PetStore - plusieurs animaux dans 1 animalerie
+    @ManyToOne
+    @JoinColumn(name = "STORE_ID")
+    private PetStore petStore;
+
+    // Getters setters
     public Long getId() {
         return id;
     }
@@ -51,5 +56,13 @@ public class Animal {
 
     public void setCouleur(String couleur) {
         this.couleur = couleur;
+    }
+
+    public PetStore getPetStore() {
+        return petStore;
+    }
+
+    public void setPetStore(PetStore petStore) {
+        this.petStore = petStore;
     }
 }

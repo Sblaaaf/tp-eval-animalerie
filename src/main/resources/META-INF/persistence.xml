@@ -12,6 +12,8 @@
         <class>petstore.entite.Animal</class>
         <class>petstore.entite.Fish</class>
         <class>petstore.entite.Cat</class>
+        <class>petstore.entite.Product</class>
+        <class>petstore.entite.PetStore</class>
 
         <properties>
             <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
